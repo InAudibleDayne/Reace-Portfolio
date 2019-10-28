@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import BlogItem from "../blog/blog-item";
+import BlogModal from "../modals/blog-modal";
 
 class Blog extends Component {
     constructor() {
@@ -41,7 +42,6 @@ class Blog extends Component {
             .get(`https://daynebechtold.devcamp.space/portfolio/portfolio_blogs?page=${this.state.currentPage}`,
                 { withCredentials: true }
             ).then(response => {
-                console.log("getting", response.data);
                 this.setState({
                     blogItems: this.state.blogItems.concat(response.data.portfolio_blogs),
                     totalCount: response.data.meta.total_records,
@@ -67,6 +67,7 @@ class Blog extends Component {
 
         return (
             <div className="blog-container">
+                <BlogModal />
                 <div className="content-container">
                         {blogRecords}
                 </div>
