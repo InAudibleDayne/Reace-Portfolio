@@ -52,7 +52,7 @@ export default class BlogForm extends Component {
 
   render() {
     return (
-        <form onSubmit={this.handleSubmit} className="portfolio-form-wrapper">
+        <form onSubmit={this.handleSubmit} className="blog-form-wrapper">
         <div className="two-column">
             <input 
             onChange={this.handleChange} 
