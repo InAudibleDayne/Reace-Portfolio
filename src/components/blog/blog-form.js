@@ -35,7 +35,12 @@ export default class BlogForm extends Component {
                 this.buildForm(), 
                 { withCredentials: true }
             ).then(response => {
-                this.props.handleSuccessfulFormSubmission(response.data);
+                this.props.handleSuccessfulFormSubmission(response.data.portfolio_blog);
+
+                this.setState({
+                    title: "",
+                    blog_status: ""
+                });
             }).catch(error => {
                 console.log("handleSubmit for blog error", error);
             })
@@ -47,7 +52,8 @@ export default class BlogForm extends Component {
 
   render() {
     return (
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} className="portfolio-form-wrapper">
+        <div className="two-column">
             <input 
             onChange={this.handleChange} 
             type="text"
@@ -62,8 +68,9 @@ export default class BlogForm extends Component {
             placeholder="Blog Status"
             value={this.state.blog_status}
             />
+        </div>
 
-            <button>Save</button>
+            <button className="btn">Save</button>
         </form>
     );
   }
