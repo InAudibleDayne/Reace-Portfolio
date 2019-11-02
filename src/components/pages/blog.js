@@ -69,7 +69,8 @@ class Blog extends Component {
                     blogItems: this.state.blogItems.concat(response.data.portfolio_blogs),
                     totalCount: response.data.meta.total_records,
                     isLoading: false
-                })
+                });
+                console.log(response.data);
         }).catch(error => {
             console.log("getBlogItems error", error);
         });
@@ -96,14 +97,16 @@ class Blog extends Component {
                 handleModalClose={this.handleModalClose}
                 />
 
+                {this.props.loggedInStatus === "LOGGED_IN" ? (
                 <div className="new-blog-link">
                     <a onClick={this.handleNewBlogClick}>
                         <FontAwesomeIcon icon="plus-circle" />
                     </a>
-                </div>
+                </div> ) : null }
+
 
                 <div className="content-container">
-                        {blogRecords}
+                    {blogRecords}
                 </div>
 
                 {this.state.isLoading ? (
