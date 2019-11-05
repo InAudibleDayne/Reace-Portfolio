@@ -11,5 +11,44 @@
     .image-uploaders {
         @include base-grid();
         grid-template-columns: 200px;
+
+        img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            background-color: $teal;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border: 1px solid $teal;
+            border-bottom: 0px;
+            margin-bottom: -6px;
+        }
+
+        .image-removal-link {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border: 1px solid $teal;
+            border-top: 0px;
+            transition: 0.5s ease-in-out;
+
+            a {
+                font-weight: 900;
+                color: $warning;
+                cursor: pointer;
+                transition: 0.5s ease-in-out;
+            }
+
+            &:hover{
+                background-color: $warning;
+                border: 1px solid $warning;
+
+                a {
+                    color: white;
+                }
+            }
+        }
     }
 }
