@@ -29,6 +29,7 @@ export default class BlogDetail extends Component {
             this.setState({
                 blogItem: response.data.portfolio_blog
             })
+            console.log(this.state.blogItem);
         }).catch(error=> {
             console.log("getBlogItem error", error);
         });
@@ -48,7 +49,10 @@ export default class BlogDetail extends Component {
 
     const contentManager = () => {
         if (this.state.editMode) {
-            return <BlogForm />
+            return (<BlogForm 
+            editMode={this.state.editMode}
+            blog={this.state.blogItem}
+            /> )
         } else {
             return (
             <div className="content-container">
