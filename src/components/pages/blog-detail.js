@@ -36,8 +36,9 @@ export default class BlogDetail extends Component {
     }
 
     handleEditClick() {
-        console.log("handle edit clicked");
-        this.setState({ editMode: true });
+        if (this.props.loggedInStatus === "LOGGED_IN") {
+            this.setState({ editMode: true });
+        };
     }
 
     getBlogItem() {
@@ -46,7 +47,6 @@ export default class BlogDetail extends Component {
             this.setState({
                 blogItem: response.data.portfolio_blog
             })
-            console.log(this.state.blogItem);
         }).catch(error=> {
             console.log("getBlogItem error", error);
         });
