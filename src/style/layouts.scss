@@ -11,6 +11,12 @@
         flex-direction: column;
         padding: 100px;
 
+        .name {
+            font-size: 2em;
+            font-weight: 900;
+            color: $teal;
+        }
+
         .contact-bullet-points {
             display: grid;
             grid-template-columns: 1fr;

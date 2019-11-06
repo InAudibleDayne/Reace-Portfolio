@@ -13,7 +13,10 @@ export default function() {
             }}
             />
             <div className="right-column">
+                <div className="name">Dayne J. Bechtold</div>
+                <div className="bio">
                 Bio goes here as well as skills and experiences
+                </div>
             </div>
         </div>
     );
