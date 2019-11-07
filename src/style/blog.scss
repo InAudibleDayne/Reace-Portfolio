@@ -1,8 +1,10 @@
 .blog-container {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
+    background-color: $offwhite;
 
     .admin-blog-wrapper {
         display: flex;
@@ -51,6 +53,10 @@
 
         h1 {
             font-size: 1.5em;
+            color: $teal;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .featured-image-wrapper {
