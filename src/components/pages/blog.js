@@ -88,7 +88,6 @@ class Blog extends Component {
                     totalCount: response.data.meta.total_records,
                     isLoading: false
                 });
-                console.log(response.data);
         }).catch(error => {
             console.log("getBlogItems error", error);
         });
