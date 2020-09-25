@@ -17,18 +17,31 @@
         .img-text-wrapper {
             position: absolute;
             top: 0;
+            // display: grid;
+            // grid-template-rows: 1fr 2fr 3fr;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
             height: 100%;
             text-align: center;
             padding-left: 100px;
             padding-right: 100px;
 
+            .title-wrapper{
+                color: $teal;
+                height: 20%;
+                line-height: 1em;
+                font-size: 1.5rem;
+                margin-top: 10px;
+            }
+
             .subtitle {
+                height: 40%;
                 transition: .5s ease-in-out;
                 color: transparent;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
         }
 
@@ -41,6 +54,8 @@
             width: 50%;
             margin-bottom: 20px;
         }
+        .logo-wrapper{
+            max-height: 50%;        }
 
         .image-blur {
             transition: .5s ease-in-out;
@@ -48,7 +63,7 @@
         }
         .image-blur-out {
             transition: .5s ease-in-out;
-            filter: brightness(100%);
+            filter: brightness(80%);
         }
     }
 }
