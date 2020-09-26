@@ -1,0 +1,28 @@
+@media (max-width: 615px){
+    //Home Page
+    .nav-link-wrapper {
+        margin-right: 10px;
+    }
+    .right-side {
+        .secret-sign-in {
+            font-size: .8rem;
+        }
+    }   
+    .portfolio-items-wrapper {
+        grid-template-columns: 1fr;
+    }     
+    .portfolio-item-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .image-text-wrapper {
+        width: 100vw;
+    }
+    .subtitle {
+        display: none;
+    }
+
+    //About Page
+}
