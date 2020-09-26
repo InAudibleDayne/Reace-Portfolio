@@ -24,6 +24,11 @@
         display: none;
     }
 
+    //Portfolio Detail
+    .bottom-content-wrapper{
+        margin-bottom: 50px;
+    }
+
     //About Page
     .content-page-wrapper .right-column{
         padding: 0px;
@@ -37,6 +42,7 @@
         width: 100vw;
     }
     .right-column {
+        margin-bottom: 50px;
         width: 100vw;
         .contact-bullet-points {
             width: 80vw;
