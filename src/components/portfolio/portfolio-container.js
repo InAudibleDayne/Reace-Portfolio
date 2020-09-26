@@ -45,20 +45,32 @@ export default class PortfolioContainer extends Component {
         });
     }
     if (filter === "CLEAR_FILTERS") {
-      this.getPortfolioItems();
+      this.PortfolioItems();
     } else { 
-      this.getPortfolioItems(filter) 
+      this.portfolioItems(filter); 
     }
   }
 
-  portfolioItems() {
+  portfolioItems(filter=null) {
     return this.state.data.map(item => {
-        return (
+        console.log(item);
+        if(filter){
+          if(item.category === filter){
+            return (
+              <PortfolioItem 
+                  key={item.id} 
+                  item={item}
+              />
+            );
+          }
+        } else {
+          return (
             <PortfolioItem 
-                key={item.id} 
-                item={item}
+              key={item.id} 
+              item={item}
             />
-        );
+          )
+        }
     });
   }
 
@@ -77,18 +89,18 @@ export default class PortfolioContainer extends Component {
           <button id='all' className={`btn ${this.state.active === 'all' ? 'active' : null}`} onClick={() => this.handleFilter("CLEAR_FILTERS")}>
               All
           </button>
-          <button id='front' className={`btn ${this.state.active === 'front' ? 'active' : null}`}  onClick={() => this.handleFilter("Front-End")}>
+          <button id='Front-End' className={`btn ${this.state.active === 'Front-End' ? 'active' : null}`}  onClick={() => this.handleFilter("Front-End")}>
               Front-End
           </button>
-          <button id='back' className={`btn ${this.state.active === 'back' ? 'active' : null}`}  onClick={() => this.handleFilter("Back-End")}>
+          <button id='Back-End' className={`btn ${this.state.active === 'Back-End' ? 'active' : null}`}  onClick={() => this.handleFilter("Back-End")}>
               Back-End
           </button>
-          <button id='full' className={`btn ${this.state.active === 'full' ? 'active' : null}`} onClick={() => this.handleFilter("Full-Stack")}>
+          <button id='Full-Stack' className={`btn ${this.state.active === 'Full-Stack' ? 'active' : null}`} onClick={() => this.handleFilter("Full-Stack")}>
               Full-Stack
           </button>
         </div>
         <div className="portfolio-items-wrapper">
-            {this.portfolioItems()}
+            {this.portfolioItems(this.state.active !== 'all' ? this.state.active : null)}
         </div>
       </div>
     );
