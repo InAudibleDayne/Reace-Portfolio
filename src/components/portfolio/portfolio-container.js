@@ -46,7 +46,6 @@ export default class PortfolioContainer extends Component {
 
   portfolioItems(filter=null) {
     return this.state.data.map(item => {
-        console.log(item);
         if(filter){
           if(item.category === filter){
             return (
