@@ -38,7 +38,7 @@ export default class PortfolioContainer extends Component {
         });
     }
     if (filter === "CLEAR_FILTERS") {
-      this.PortfolioItems();
+      this.portfolioItems();
     } else { 
       this.portfolioItems(filter); 
     }
