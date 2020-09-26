@@ -25,15 +25,48 @@
     }
 
     //About Page
+    .content-page-wrapper .right-column{
+        padding: 0px;
+    }
     .content-page-wrapper{
+        width: 100vw;
         grid-template-columns: 1fr;
     }
     .left-column {
         height: 400px;
+        width: 100vw;
+    }
+    .right-column {
+        width: 100vw;
+        .contact-bullet-points {
+            width: 80vw;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .name{
+            width: 100vw;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .bio {
+            width: 80vw;
+            padding-top: 20px;
+        }
     }
 
     //auth page
     .auth-page-wrapper {
         grid-template-columns: 1fr;
+    }
+
+    //blog
+    .blog-container .content-container {
+        width: unset;
+    }
+    .blog-container{
+        width: 100vw;
+    }
+    .content-container{
+        width: 80vw !important;
     }
 }
