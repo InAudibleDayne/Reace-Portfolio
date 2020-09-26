@@ -25,4 +25,15 @@
     }
 
     //About Page
+    .content-page-wrapper{
+        grid-template-columns: 1fr;
+    }
+    .left-column {
+        height: 400px;
+    }
+
+    //auth page
+    .auth-page-wrapper {
+        grid-template-columns: 1fr;
+    }
 }
