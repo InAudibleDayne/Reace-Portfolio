@@ -17,21 +17,14 @@ export default class PortfolioContainer extends Component {
     this.handleFilter = this.handleFilter.bind(this);
   }
 
-  getPortfolioItems(filter = null) {
+  getPortfolioItems() {
     axios
       .get('https://daynebechtold.devcamp.space/portfolio/portfolio_items')
       .then(response => {
-        if (filter) {
-          this.setState({
-            data: response.data.portfolio_items.filter(item => {
-              return item.category === filter;
-            })
-          });
-        } else {
         this.setState({
             data: response.data.portfolio_items
         }) }
-      })
+      )
       .catch( error => {
         console.log(error);
       });
