@@ -82,13 +82,13 @@ export default class PortfolioContainer extends Component {
               All
           </button>
           <button id='Front-End' className={`btn ${this.state.active === 'Front-End' ? 'active' : null}`}  onClick={() => this.handleFilter("Front-End")}>
-              Front-End
+              Front End
           </button>
           <button id='Back-End' className={`btn ${this.state.active === 'Back-End' ? 'active' : null}`}  onClick={() => this.handleFilter("Back-End")}>
-              Back-End
+              Back End
           </button>
           <button id='Full-Stack' className={`btn ${this.state.active === 'Full-Stack' ? 'active' : null}`} onClick={() => this.handleFilter("Full-Stack")}>
-              Full-Stack
+              Full Stack
           </button>
         </div>
         <div className="portfolio-items-wrapper">
