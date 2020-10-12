@@ -1,4 +1,9 @@
-@media (max-width: 615px){
+@media(max-width: 1275px){
+    .portfolio-items-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }   
+}
+@media (max-width: 850px){
     //Home Page
     .nav-link-wrapper {
         margin-right: 10px;
